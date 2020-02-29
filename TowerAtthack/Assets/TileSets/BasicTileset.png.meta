@@ -8,6 +8,24 @@ TextureImporter:
   - first:
       213: 1982209138906739537
     second: Board
+  - first:
+      213: -7902130593766481415
+    second: BasicTileset_0
+  - first:
+      213: -1592426052832846886
+    second: BasicTileset_1
+  - first:
+      213: -8323845427849855041
+    second: BasicTileset_2
+  - first:
+      213: 1982209138906739537
+    second: BasicTileset_1
+  - first:
+      213: 7597606887592776078
+    second: BasicTileset_2
+  - first:
+      213: -9065467645503672192
+    second: BasicTileset_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -37,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -92,36 +110,36 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Circuit
+      name: BasicTileset_0
       rect:
         serializedVersion: 2
         x: 4
         y: 44
         width: 32
         height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69e31338dbf9c4420800000000000000
-      internalID: 2615641119894093462
+      spriteID: 9f16dcd971ef55290800000000000000
+      internalID: -7902130593766481415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Board
+      name: BasicTileset_1
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
+        x: 44
+        y: 44
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -129,6 +147,48 @@ TextureImporter:
       bones: []
       spriteID: 153b11ba5b8328b10800000000000000
       internalID: 1982209138906739537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BasicTileset_2
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e81570ed53f107960800000000000000
+      internalID: 7597606887592776078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BasicTileset_3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 4
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080f4f2153df03280800000000000000
+      internalID: -9065467645503672192
       vertices: []
       indices: 
       edges: []

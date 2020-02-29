@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Circuit
+  m_Name: BasicTileset_1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 2615641119894093462, guid: f7697905d2df88d4ca0f141b25d3c6ec,
+  m_Sprite: {fileID: -1592426052832846886, guid: f7697905d2df88d4ca0f141b25d3c6ec,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:

@@ -15,5 +15,10 @@ public class TPoints : MonoBehaviour
         {
             points[i] = transform.GetChild(i);
         }
+
+        for(int i = 0; i < size - 1; i++)
+        {
+            points[i].GetComponent<PointScript>().next_point = points[i + 1];
+        }
     }
 }

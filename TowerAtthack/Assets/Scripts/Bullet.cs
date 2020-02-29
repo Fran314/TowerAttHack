@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletMover : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     public float speed = 10f;
+    public float damage_output = 20f;
     public float life_span = 5f;
 
     private Transform target;
@@ -34,7 +35,8 @@ public class BulletMover : MonoBehaviour
 
             if(dir.magnitude <= next_distance)
             {
-                Debug.Log("Hit!");
+                //Destroy(target.gameObject);
+                target.GetComponent<Virus>().health -= damage_output;
                 Destroy(gameObject);
             }
             else

@@ -43,13 +43,13 @@ public class FindAndShoot : MonoBehaviour
     void Shoot()
     {
         GameObject bulletGO = (GameObject) Instantiate(bullet_prefab, transform.position + (transform.up * 0.55f), transform.rotation);
-        BulletMover bullet_mover = bulletGO.GetComponent<BulletMover>();
-        bullet_mover.setTarget(target);
+        Bullet bullet_script = bulletGO.GetComponent<Bullet>();
+        bullet_script.setTarget(target);
     }
 
     void UpdateTarget()
     {
-        GameObject[] viruses = GameObject.FindGameObjectsWithTag(TagManager.virus_tag);
+        GameObject[] viruses = VirusListManager.viruses.ToArray();
 
         float min = Mathf.Infinity;
         Transform nearest = null;

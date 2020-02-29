@@ -5,20 +5,29 @@ using UnityEngine;
 public class SpawnerManager : MonoBehaviour
 {
     public Transform spawn;
-    public Object virus_prefab;
+    public Object basic_virus_prefab;
+    public Object sc_virus_prefab;
 
     void Start()
     {
-        InvokeRepeating("Spawn", 1f, 5f);
+        InvokeRepeating("SpawnBasic", 1f, 5f);
+        InvokeRepeating("SpawnSC", 13f, 10f);
     }
 
-    public void Spawn()
+    public void SpawnBasic()
     {
-        Instantiate(virus_prefab, spawn);
+        GameObject virus = (GameObject) Instantiate(basic_virus_prefab, spawn.position, Quaternion.identity);
+        VirusListManager.viruses.Add(virus);
     }
-    
+
+    public void SpawnSC()
+    {
+        GameObject virus = (GameObject)Instantiate(sc_virus_prefab, spawn.position, Quaternion.identity);
+        VirusListManager.viruses.Add(virus);
+    }
+
     void Update()
     {
-        
+        Debug.Log(VirusListManager.viruses.Count + " ");
     }
 }

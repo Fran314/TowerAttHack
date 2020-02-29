@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Virus
+  - Firewall
+  - Virus-Basic
+  - Virus-Shortcutter
   layers:
   - Default
   - TransparentFX
@@ -15,8 +18,8 @@ TagManager:
   - 
   - 
   - Background
-  - Objects
-  - 
+  - Viruses
+  - Obstacles
   - 
   - 
   - 
