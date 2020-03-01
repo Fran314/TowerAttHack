@@ -8,10 +8,14 @@ public class Virus : MonoBehaviour
     public float health = 100f;
     public float max_health = 100f;
     public float damage_output = 20f;
+    public int priority = 1;
+    public float awareness_increment = 20f;
 
     public Transform target;
 
     GameObject bug;
+
+    private float threshold = 0.00001f;
     
     void Start()
     {
@@ -43,10 +47,18 @@ public class Virus : MonoBehaviour
             target = target.GetComponent<PointScript>().next_point;
             if (target == null)
             {
-                VirusListManager.viruses.Remove(gameObject);
                 Destroy(gameObject);
             }
         }
+
+        float xpos = transform.position.x;
+        float decimal_x = xpos - Mathf.Floor(xpos);
+        if (decimal_x >= 0.5f - threshold && decimal_x <= 0.5f + threshold) xpos = Mathf.Floor(xpos) + 0.5f;
+
+        float ypos = transform.position.y;
+        float decimal_y = ypos - Mathf.Floor(ypos);
+        if (decimal_y >= 0.5f - threshold && decimal_y <= 0.5f + threshold) ypos = Mathf.Floor(ypos) + 0.5f;
+        transform.position = new Vector3(xpos, ypos, 0);
     }
 
     void OnCollisionStay2D(Collision2D col)

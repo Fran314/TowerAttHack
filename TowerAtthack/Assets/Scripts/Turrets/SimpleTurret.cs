@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FindAndShoot : MonoBehaviour
+public class SimpleTurret : MonoBehaviour
 {
     public float range = 2f;
     public float fire_rate = 2f;
+    public float damage_output = 10f;
 
     public Object bullet_prefab;
 
@@ -45,25 +46,37 @@ public class FindAndShoot : MonoBehaviour
         GameObject bulletGO = (GameObject) Instantiate(bullet_prefab, transform.position + (transform.up * 0.55f), transform.rotation);
         Bullet bullet_script = bulletGO.GetComponent<Bullet>();
         bullet_script.setTarget(target);
+        bullet_script.damage_output = damage_output;
     }
 
     void UpdateTarget()
     {
-        GameObject[] viruses = VirusListManager.viruses.ToArray();
+        GameObject[] viruses = VirusListManager.getVirusesArray();
 
-        float min = Mathf.Infinity;
+        float min_dist = Mathf.Infinity;
+        int max_pr = -1000;
         Transform nearest = null;
         foreach(GameObject virus in viruses)
         {
             float dist = Vector3.Distance(transform.position, virus.transform.position);
-            if (dist < min)
+            if (dist <= range)
             {
-                min = dist;
-                nearest = virus.transform;
+                if (virus.GetComponent<Virus>().priority > max_pr)
+                {
+                    min_dist = dist;
+                    max_pr = virus.GetComponent<Virus>().priority;
+                    nearest = virus.transform;
+                }
+                else if (virus.GetComponent<Virus>().priority == max_pr && dist < min_dist)
+                {
+                    min_dist = dist;
+                    max_pr = virus.GetComponent<Virus>().priority;
+                    nearest = virus.transform;
+                }
             }
         }
 
-        if (nearest != null && min <= range) target = nearest;
+        if (nearest != null) target = nearest;
         else target = null;
     }
 

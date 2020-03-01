@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     public float damage_output = 20f;
     public float life_span = 5f;
 
-    private Transform target;
+    public Transform target;
 
     void Start()
     {
@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         life_span -= Time.deltaTime;
-        if (life_span <= 0)
+        if (life_span <= 0 || target == null)
         {
             Destroy(gameObject);
             return;

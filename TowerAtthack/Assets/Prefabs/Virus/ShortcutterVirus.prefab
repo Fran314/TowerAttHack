@@ -50,6 +50,8 @@ MonoBehaviour:
   health: 100
   max_health: 100
   damage_output: 20
+  priority: 1
+  target: {fileID: 0}
 --- !u!50 &5041271528535541751
 Rigidbody2D:
   serializedVersion: 4
@@ -145,7 +147,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f7cce13361453fb48bde5ab6f38a0ae3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
