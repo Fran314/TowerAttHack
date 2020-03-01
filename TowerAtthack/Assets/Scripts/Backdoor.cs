@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShortcutScript : MonoBehaviour
+public class Backdoor : MonoBehaviour
 {
-    public Transform start = null;
-    public Transform end = null;
+    public Transform game_manager;
+    public Transform spawn;
 
     void Start()
     {
         
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         
@@ -22,7 +21,7 @@ public class ShortcutScript : MonoBehaviour
     {
         if (col.gameObject.tag.Equals(TagManager.sc_virus_tag))
         {
-            start.GetComponent<PointScript>().next_point = end;
+            game_manager.GetComponent<SpawnerManager>().spawn = spawn;
             Destroy(gameObject);
         }
     }

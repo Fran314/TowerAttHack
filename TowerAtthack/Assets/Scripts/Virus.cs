@@ -9,13 +9,18 @@ public class Virus : MonoBehaviour
     public float max_health = 100f;
     public float damage_output = 20f;
 
-    private Transform target;
+    public Transform target;
 
     GameObject bug;
     
     void Start()
     {
-        target = TPoints.points[0];
+        //target = TPoints.points[0];
+    }
+
+    public void setTarget(Transform _target)
+    {
+        target = _target;
     }
     
     void Update()
