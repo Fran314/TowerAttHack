@@ -130,7 +130,7 @@ MonoBehaviour:
   max_health: 100
   damage_output: 100
   priority: 1
-  awareness_increment: 20
+  awareness_increment: 30
   target: {fileID: 0}
 --- !u!50 &3620883974055309181
 Rigidbody2D:

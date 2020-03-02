@@ -6,6 +6,7 @@ public class Backdoor : MonoBehaviour
 {
     public Transform game_manager;
     public Transform spawn;
+    public GameObject particle_prefab;
 
     void Start()
     {
@@ -19,9 +20,10 @@ public class Backdoor : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag.Equals(TagManager.sc_virus_tag))
+        if (col.gameObject.tag.Equals(TagManager.bd_virus_tag))
         {
             game_manager.GetComponent<SpawnerManager>().spawn = spawn;
+            Instantiate(particle_prefab, spawn.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

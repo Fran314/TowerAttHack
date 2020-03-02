@@ -31,6 +31,7 @@ public class AwarenessManager : MonoBehaviour
     {
         awareness -= Time.deltaTime * gameObject.GetComponent<SpawnerManager>().spawn.GetComponent<Spawn>().awareness_decrease_multiplier;
         if (awareness < 0) awareness = 0;
+        if (VirusListManager.getVirusesArray().Length == 0) awareness = 0;
 
         awareness_bar.fillAmount = awareness / (100f);
         color = 149 - (awareness * (149f / 100f));
