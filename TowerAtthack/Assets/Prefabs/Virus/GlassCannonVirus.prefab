@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 1122881333522093938}
   m_Layer: 9
   m_Name: GlassCannonVirus
-  m_TagString: Virus-Basic
+  m_TagString: Virus-GlassCannon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

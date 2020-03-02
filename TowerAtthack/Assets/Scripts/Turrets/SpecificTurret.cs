@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpecificTurret : MonoBehaviour
 {
+    public string target_tag;
+
     public float range = 2f;
     public float fire_rate = 0.5f;
     public float damage_output = 150f;
@@ -58,7 +60,7 @@ public class SpecificTurret : MonoBehaviour
         foreach (GameObject virus in viruses)
         {
             float dist = Vector3.Distance(transform.position, virus.transform.position);
-            if (dist < min  && virus.tag.Equals(TagManager.sc_virus_tag))
+            if (dist < min  && virus.tag.Equals(target_tag))
             {
                 min = dist;
                 nearest = virus.transform;

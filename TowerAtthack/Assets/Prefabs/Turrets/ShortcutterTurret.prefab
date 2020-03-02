@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6877259480407662845}
   - component: {fileID: 4872022352413551990}
   m_Layer: 0
-  m_Name: SpecificTurret
+  m_Name: ShortcutterTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,8 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a08b08324fa80a245b8341bee50b6879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target_tag: Virus-Shortcutter
   range: 2
   fire_rate: 0.5
+  damage_output: 150
   bullet_prefab: {fileID: 5076473025868377606, guid: 5af9a372a14c570438d05258c7b4c9f7,
     type: 3}
 --- !u!1 &6877259480724067466

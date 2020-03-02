@@ -51,6 +51,24 @@ public class Virus : MonoBehaviour
             }
         }
 
+        float angle = Vector3.Angle(move, Vector3.up);
+
+        if(angle <= 45f)
+        {
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        }
+        else if(angle <= 135f)
+        {
+            if (Vector3.Dot(move, Vector3.up) <= 0)
+                transform.rotation = Quaternion.Euler(0f, 0f, -90f);
+            else
+                transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0f, 0f, 180f);
+        }
+
         float xpos = transform.position.x;
         float decimal_x = xpos - Mathf.Floor(xpos);
         if (decimal_x >= 0.5f - threshold && decimal_x <= 0.5f + threshold) xpos = Mathf.Floor(xpos) + 0.5f;

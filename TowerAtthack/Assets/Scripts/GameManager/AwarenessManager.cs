@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class AwarenessManager : MonoBehaviour
 {
     public float awareness = 0f;
-    public float aw_decrease_speed = 3f;
     public float color = 0;
 
     public Image awareness_bar;
@@ -30,7 +29,7 @@ public class AwarenessManager : MonoBehaviour
     
     void Update()
     {
-        awareness -= aw_decrease_speed * Time.deltaTime;
+        awareness -= Time.deltaTime * gameObject.GetComponent<SpawnerManager>().spawn.GetComponent<Spawn>().awareness_decrease_multiplier;
         if (awareness < 0) awareness = 0;
 
         awareness_bar.fillAmount = awareness / (100f);

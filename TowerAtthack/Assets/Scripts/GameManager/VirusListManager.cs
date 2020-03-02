@@ -9,6 +9,8 @@ public class VirusListManager : MonoBehaviour
         List<GameObject> viruses_list = new List<GameObject>();
         viruses_list.AddRange(GameObject.FindGameObjectsWithTag(TagManager.basic_virus_tag));
         viruses_list.AddRange(GameObject.FindGameObjectsWithTag(TagManager.sc_virus_tag));
+        viruses_list.AddRange(GameObject.FindGameObjectsWithTag(TagManager.fm_virus_tag));
+        viruses_list.AddRange(GameObject.FindGameObjectsWithTag(TagManager.gc_virus_tag));
 
         return viruses_list.ToArray();
     }

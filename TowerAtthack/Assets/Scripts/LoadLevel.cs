@@ -17,8 +17,8 @@ public class LoadLevel : MonoBehaviour
         
     }
 
-    public void LoadLevelNmb(int arg)
+    public void Load(string arg)
     {
-        SceneManager.LoadScene("Level" + arg.ToString());
+        SceneManager.LoadScene(arg);
     }
 }

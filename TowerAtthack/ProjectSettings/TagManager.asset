@@ -8,6 +8,9 @@ TagManager:
   - Firewall
   - Virus-Basic
   - Virus-Shortcutter
+  - Virus-FollowMe
+  - Virus-GlassCannon
+  - Virus-Backdoor
   layers:
   - Default
   - TransparentFX

@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5279230336757467219}
   m_Layer: 9
   m_Name: FollowMeVirus
-  m_TagString: Virus-Basic
+  m_TagString: Virus-FollowMe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
