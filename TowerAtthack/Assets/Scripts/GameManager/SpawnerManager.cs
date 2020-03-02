@@ -5,9 +5,6 @@ using UnityEngine;
 public class SpawnerManager : MonoBehaviour
 {
     public Transform spawn;
-    public Object basic_virus_prefab;
-    public Object sc_virus_prefab;
-    public Object fm_virus_prefab;
 
     private AwarenessManager aw_manager;
 

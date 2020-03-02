@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseManager : MonoBehaviour
+public class InputManager : MonoBehaviour
 {
     public GameObject pause_panel;
 

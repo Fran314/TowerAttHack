@@ -59,10 +59,10 @@ public class Virus : MonoBehaviour
         }
         else if(angle <= 135f)
         {
-            if (Vector3.Dot(move, Vector3.up) <= 0)
-                transform.rotation = Quaternion.Euler(0f, 0f, -90f);
-            else
+            if (Vector3.Dot(move, Vector3.right) <= 0)
                 transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+            else
+                transform.rotation = Quaternion.Euler(0f, 0f, -90f);
         }
         else
         {
