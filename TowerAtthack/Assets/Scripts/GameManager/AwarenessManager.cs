@@ -12,7 +12,8 @@ public class AwarenessManager : MonoBehaviour
     public Image awareness_bar;
     public Image antivirus_update;
 
-    public Button[] buttons;
+    public Transform buttons_folder;
+    private Button[] buttons;
 
     private int blink_counter = 0;
     private int blink_amount = 2;
@@ -20,6 +21,10 @@ public class AwarenessManager : MonoBehaviour
 
     void Start()
     {
+        buttons = new Button[buttons_folder.childCount];
+        for (int i = 0; i < buttons_folder.childCount; i++)
+            buttons[i] = buttons_folder.GetChild(i).GetComponent<Button>();
+
         antivirus_update.color = new Color(antivirus_update.color.r, antivirus_update.color.g, antivirus_update.color.b, 0);
     }
     
