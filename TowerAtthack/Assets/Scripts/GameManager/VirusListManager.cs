@@ -11,6 +11,7 @@ public class VirusListManager : MonoBehaviour
         viruses_list.AddRange(GameObject.FindGameObjectsWithTag(TagManager.sc_virus_tag));
         viruses_list.AddRange(GameObject.FindGameObjectsWithTag(TagManager.fm_virus_tag));
         viruses_list.AddRange(GameObject.FindGameObjectsWithTag(TagManager.gc_virus_tag));
+        viruses_list.AddRange(GameObject.FindGameObjectsWithTag(TagManager.bd_virus_tag));
 
         return viruses_list.ToArray();
     }
